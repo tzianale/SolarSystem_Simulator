@@ -1,0 +1,41 @@
+version: 1.0.{build}
+image: Visual Studio 2022
+
+branches:
+  only:
+    - main
+    - dev
+    - appveyor-configuration
+
+environment:
+  SONARQUBE_SCANNER_MSBUILD_VERSION: 5.2.1
+
+install:
+  - choco install unity --version=2022.3.18 -y
+  - choco install sonarscanner-net-framework
+
+build_script:
+    #- dir "C:\Program Files\Unity.exe" /s /b
+  - set PATH=%PATH%;C:\Program Files\Unity 2022.3.18f1\Editor
+
+  # Build your Unity project
+  - Unity -serial %UNITY_SERIAL% -username %UNITY_USER_ID% -password %UNITY_USER_PASSWORD% -quit -batchmode -nographics -projectPath C:\projects\solar-system-simulator\ -executeMethod UnityEditor.SyncVS.SyncSolution
+
+  - set JAVA_HOME=C:\Program Files\Java\jdk17
+  - set PATH=%JAVA_HOME%\bin;%PATH%
+
+  # Run SonarQube analysis specifying the project file
+  - SonarScanner.MSBuild.exe begin /k:"Solar-System-Simulator" /d:sonar.host.url="http://160.85.252.39:9000" /d:sonar.token="sqp_397b85cf974b2da969f260187fe4351beb9ae098" /d:sonar.cs.vs.solution.file="C:\projects\solar-system-simulator\Assembly-CSharp.csproj" /d:sonar.inclusions="**/Assets/Scripts/**/*" /d:sonar.cs.opencover.reportsPaths="C:/projects/solar-system-simulator/codecoverage/solar-system-simulator-opencov/**/*"
+  - dotnet build Solar-System-Simulator.sln
+  - Unity -batchmode -testPlatform editmode -runTests -enableCodeCoverage -coverageOptions "assemblyFilters:+Scripts"
+  - Unity -batchmode -testPlatform playmode -runTests -enableCodeCoverage -coverageOptions "assemblyFilters:+Scripts"
+  - SonarScanner.MSBuild.exe end /d:sonar.token="sqp_397b85cf974b2da969f260187fe4351beb9ae098"
+
+test: off
+
+on_finish:
+  - Unity -batchmode -returnlicense
+
+artifacts:
+  - path: 'Builds/Windows'
+    name: WindowsBuild

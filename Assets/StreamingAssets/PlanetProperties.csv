@@ -1,0 +1,14 @@
+﻿Planet Name;Mass;Body Type;Surface Temperature;Radius;Gravity;Average Orbital Speed;Satellites;Rings;Periapsis;Apoapsis;Orbit Duration;Day Duration
+Sun;1.999E+30_kg;Star (Yellow Dwarf); Coronal (Atmospheric) temperature up to 2 million °C;1391_* 10 ^ 3 km;27.94_g;217.00_km/s (galactic orbit);8 planets and multiple smaller corpses;None;null;null;230_million years; 25.00 d (Equator), 36 d (Poles)
+Mercury;0.330E+24_kg;Rocky Planet; -193°C / 427°C;2440_km;0.38_g;47.36_km/s;0;None;  46.0_* 10 ^ 6 km;  69.8_* 10 ^ 6 km;88_d;176.00 d
+Venus;4.87E+24_kg;Rocky Planet; average: 464°C;6052_km;0.90_g;35.02_km/s;0;None; 107.5_* 10 ^ 6 km; 108.8_* 10 ^ 6 km;224.7_d;116.80 d
+Earth;5.97E+24_kg;Rocky Planet; -89°C / 57°C;6378_km;1.00_g;29.78_km/s;1;None; 147.1_* 10 ^ 6 km; 152.1_* 10 ^ 6 km;365.2_d;  1.00 d
+Earths Moon;0.073E+24_kg;Rocky Moon; -173°C /  117°C;1738_km;0.17_g;1.00_km/s (earths orbit);0;None; 363.0_* 10 ^ 3 km; 406.0_* 10 ^ 3 km;27.3_d (earths orbit); 29.53 d
+Mars;0.642E+24_kg;Rocky Planet; -89°C / -31°C;3396_km;0.38_g;24.10_km/s;2;None; 206.7_* 10 ^ 6 km; 249.3_* 10 ^ 6 km;687_d;  1.03 d
+Phobos;1.06E+16_kg;Rocky Moon; -112°C / -4°C ;11.08_km (mean);581.4_micro g;2.14_km/s (martian orbit);0;None; 923.4_* 10 ^ 1 km; 951.7_* 10 ^ 1 km;0.3_d (martian orbit);  0.30 d
+Deimos;0.151E+16_kg;Rocky Moon; -140°C / -40°C;6.27_km (mean);306_micro g;1.35_km/s (martian orbit);0;None;2345.6_* 10 ^ 1 km;2347.1_* 10 ^ 1 km;1.3_d (martian orbit);  1.30 d
+Jupiter;1898E+24_kg;Gas Giant; at 1 bar -> -108°C;71492_km;2.53_g;13.19_km/s;95;Present; 740.6_* 10 ^ 6 km; 816.4_* 10 ^ 6 km;4331_d;  0.41 d
+Saturn;568E+24_kg;Gas Giant; at 1 bar -> -139°C;60268_km;1.07_g;9.70_km/s;146;Present;1357.6_* 10 ^ 6 km;1506.5_* 10 ^ 6 km;10747_d;  0.45 d
+Uranus;86.8E+24_kg;Ice Giant; at 1 bar -> -197°C;25559_km;0.89_g;6.80_km/s;28;Present;2732.7_* 10 ^ 6 km;3001.4_* 10 ^ 6 km;30589_d;  0.72 d
+Neptune;102E+24_kg;Ice Giant; at 1 bar -> -201°C;24764_km;1.14_g;5.40_km/s;16;Present;4471.1_* 10 ^ 6 km;4558.9_* 10 ^ 6 km;59800_d;  0.67 d
+Pluto;0.0130E+24_kg;Dwarf Planet; -247°C / -233°C;1188_km;0.06_g;4.70_km/s;5;None;4436.8_* 10 ^ 6 km;7375.9_* 10 ^ 6 km;90560_d;  6.39 d
